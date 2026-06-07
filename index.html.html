@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo da Empresa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo-container">
+
+        <div class="logo-box">
+            <img src="imagens/logo cesta.png" alt="Logo Cesta">
+        </div>
+
+        <div class="logo-box">
+            <img src="imagens/logo moveis.jpg" alt="Logo Móveis">
+        </div>
+
+    </div>
+
+    <div class="header-title">
+
+        <h1>Vyllato Móveis & Cesta Básica do Barba</h1>
+
+        <p>Móveis • Eletrodomésticos • Cestas Básicas • Produtos de Limpeza</p>
+
+        <a class="btn-header" href="https://wa.me/5562983255417">
+            Chamar no WhatsApp
+        </a>
+
+    </div>
+
+</header>
+
+<!-- PESQUISA -->
+<div class="pesquisa">
+    <input type="text" id="pesquisa" placeholder="Pesquisar produtos...">
+    <button id="limpar">Limpar</button>
+</div>
+
+<!-- FILTROS -->
+<div class="filtros">
+    <button id="todos">Todos</button>
+    <button id="cesta">Cestas</button>
+    <button id="limpeza">Limpeza</button>
+    <button id="moveis">Móveis</button>
+    <button id="eletro">Eletrodomésticos</button>
+</div>
+
+<div class="categorias">
+
+    <p id="mensagem-vazia" style="display:none; text-align:center; font-weight:bold; margin-top:20px;">
+        Nenhum produto encontrado 😕
+    </p>
+
+    <!-- PRODUTOS -->
+    <div class="categoria produto cesta"
+    data-detalhes="✔ 5kg Arroz
+✔ 2kg Feijão
+✔ 1 Óleo
+✔ 1 Açúcar
+✔ 1 Macarrão
+
+Pagamento:
+✔ À vista
+✔ Promissória
+
+Entrega:
+✔ Goiânia
+✔ Aparecida de Goiânia">
+
+        <h2>Cesta Básica Econômica</h2>
+        <img src="imagens/cestapremium.jpg" alt="Cesta Básica">
+
+        <p>Kit essencial para o dia a dia com alimentos básicos.</p>
+
+        <p class="preco">R$ 120,00</p>
+
+        <a class="btn-whatsapp" data-produto="Cesta Básica Econômica" data-preco="120,00">
+            Comprar no WhatsApp
+        </a>
+    </div>
+
+    <div class="categoria produto cesta"
+    data-detalhes="✔ Mais completa
+✔ Ideal para o mês inteiro">
+
+        <h2>Cesta Básica Premium</h2>
+        <img src="imagens/produto.jpg" alt="Cesta Premium">
+
+        <p>Mais completa e ideal para o mês inteiro.</p>
+
+        <p class="preco">R$ 600,00</p>
+
+        <a class="btn-whatsapp" data-produto="Cesta Básica Premium" data-preco="600,00">
+            Comprar no WhatsApp
+        </a>
+    </div>
+
+    <div class="categoria produto limpeza"
+    data-detalhes="✔ Alta eficiência na limpeza">
+
+        <h2>Detergente Ypê</h2>
+        <img src="imagens/detergenteype.png" alt="Detergente Ypê">
+
+        <p>Ideal para limpeza diária.</p>
+
+        <p class="preco">R$ 40,00</p>
+
+        <a class="btn-whatsapp" data-produto="Detergente Ypê" data-preco="40,00">
+            Comprar no WhatsApp
+        </a>
+    </div>
+
+    <div class="categoria produto moveis"
+    data-detalhes="✔ Confortável
+✔ 3 lugares">
+
+        <h2>Sofá 3 Lugares</h2>
+        <img src="imagens/sofa.png" alt="Sofá">
+
+        <p>Conforto e qualidade.</p>
+
+        <p class="preco">R$ 1.299,00</p>
+
+        <a class="btn-whatsapp" data-produto="Sofá 3 Lugares" data-preco="1.299,00">
+            Comprar no WhatsApp
+        </a>
+    </div>
+
+    <div class="categoria produto moveis"
+    data-detalhes="✔ 6 portas
+✔ 2 gavetas">
+
+        <h2>Guarda-Roupa Casal</h2>
+        <img src="imagens/guarda roupa.jpg" alt="Guarda-Roupa Casal">
+
+        <p>Espaçoso e moderno.</p>
+
+        <p class="preco">R$ 899,00</p>
+
+        <a class="btn-whatsapp" data-produto="Guarda-Roupa Casal" data-preco="899,00">
+            Comprar no WhatsApp
+        </a>
+    </div>
+
+    <div class="categoria produto eletro"
+    data-detalhes="✔ Frost Free
+✔ Econômica">
+
+        <h2>Geladeira Consul 340L</h2>
+        <img src="imagens/geladeira.jpg" alt="Geladeira">
+
+        <p>Ideal para famílias.</p>
+
+        <p class="preco">R$ 2.499,00</p>
+
+        <a class="btn-whatsapp" data-produto="Geladeira Consul 340L" data-preco="2.499,00">
+            Comprar no WhatsApp
+        </a>
+    </div>
+
+    <div class="categoria produto eletro"
+    data-detalhes="✔ 4 bocas
+✔ acendimento automático">
+
+        <h2>Fogão 4 Bocas</h2>
+        <img src="imagens/fogão.jpg" alt="Fogão">
+
+        <p>Prático e moderno.</p>
+
+        <p class="preco">R$ 799,00</p>
+
+        <a class="btn-whatsapp" data-produto="Fogão 4 Bocas" data-preco="799,00">
+            Comprar no WhatsApp
+        </a>
+    </div>
+
+</div>
+
+<!-- MODAL PRODUTO -->
+<div id="modalProduto" class="modal hidden">
+    <div class="modal-content">
+
+        <span class="close" id="fecharModal">&times;</span>
+
+        <img id="modalImg">
+        <h2 id="modalTitulo"></h2>
+        <p id="modalDescricao"></p>
+
+        <div id="modalDetalhes"></div>
+
+        <p id="modalPreco"></p>
+
+        <a id="modalBtnWhatsapp" target="_blank">
+            Comprar no WhatsApp
+        </a>
+
+    </div>
+</div>
+
+<!-- PAINEL -->
+<div style="text-align:center; margin:20px;">
+    <button id="abrirPainel">📊 Painel do Dono</button>
+</div>
+
+<div id="painelDono" class="modal hidden">
+    <div class="modal-content painel-pro">
+
+        <span class="close" id="fecharPainel">&times;</span>
+
+        <h2>📊 Dashboard de Vendas</h2>
+
+        <div id="resumoCards"></div>
+
+        <h3>🏆 Ranking de Produtos</h3>
+        <div id="rankingProdutos"></div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
