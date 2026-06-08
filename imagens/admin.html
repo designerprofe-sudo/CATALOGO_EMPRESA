@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Painel do Dono</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            padding:20px;
+            background:#f5f5f5;
+        }
+
+        h1{
+            text-align:center;
+        }
+
+        .card{
+            background:white;
+            padding:15px;
+            margin:10px 0;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        }
+
+    </style>
+
+</head>
+<body>
+
+<h1>Painel do Dono</h1>
+
+<div id="estatisticas"></div>
+
+<script>
+
+const container = document.getElementById("estatisticas");
+
+for(let chave in localStorage){
+
+    if(chave.startsWith("cliques_")){
+
+        const produto = chave.replace("cliques_","");
+        const quantidade = localStorage.getItem(chave);
+
+        container.innerHTML += `
+            <div class="card">
+                <h3>${produto}</h3>
+                <p>${quantidade} clique(s)</p>
+            </div>
+        `;
+    }
+
+}
+
+</script>
+
+</body>
+</html>
